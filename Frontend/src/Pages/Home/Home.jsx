@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="h-screen flex flex-col sm:flex-row">
       {/* Sidebar */}
-      <aside className="bg-gray-800 text-white w-full sm:w-64 sm:h-full h-auto fixed sm:relative">
+      <aside className=" text-white w-16 sm:h-full h-auto fixed sm:relative">
         <SideNavbar />
       </aside>
 

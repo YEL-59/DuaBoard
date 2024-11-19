@@ -6,8 +6,8 @@ const Navbars = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="p-4 border-b-2 border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 flex justify-between items-center">
-      <h1 className="text-lg font-bold text-gray-800 dark:text-gray-200">App Title</h1>
+    <div className="p-4   flex justify-between items-center">
+      <h1 className="text-lg font-bold text-gray-800">Dua Page</h1>
       <button
         type="button"
         onClick={() => dispatch(toggleSidebar())}
