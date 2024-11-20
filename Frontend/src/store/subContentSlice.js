@@ -1,14 +1,15 @@
-
+// subContentSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const subContentSlice = createSlice({
   name: "subContent",
-  initialState: null, // No content selected by default
+  initialState: { selectedItem: {} }, // Ensure this is an empty object, not null
   reducers: {
-    setSubContent: (state, action) => action.payload,
-    clearSubContent: () => null,
+    setSubContent: (state, action) => {
+      state.selectedItem = action.payload;
+    },
   },
 });
 
-export const { setSubContent, clearSubContent } = subContentSlice.actions;
+export const { setSubContent } = subContentSlice.actions;
 export default subContentSlice.reducer;
