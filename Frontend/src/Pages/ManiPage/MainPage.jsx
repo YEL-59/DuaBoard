@@ -9,7 +9,7 @@ const MainPage = () => {
 
   return (
     <div className={`p-4 ${isSidebarOpen ? "sm:ml-64" : ""}`}>
-      <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg">
+      <div className="  rounded-lg">
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 mb-4">
           <div className="col-span-12 sm:col-span-3">
             <Categories />

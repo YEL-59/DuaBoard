@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import ShowSubContent from "./ShowSubContent";
+import { useSelector } from "react-redux"; 
+
 
 const ShowContent = () => {
   const [data, setData] = useState([]);
-
+  const selectedItem = useSelector((state) => state.subContent.selectedItem);
   useEffect(() => {
     // Fetch the data from the API
     fetch("http://localhost:5000/api/dropdown")
@@ -12,15 +14,17 @@ const ShowContent = () => {
       .catch((error) => console.error("Error fetching dropdown data:", error));
   }, []);
 
-  console.log("Fetched Data:", data);
+  console.log("api Data:", data);
 
   return (
     <>
       <div className="w-full sm-max:overflow-y-auto sm-max:pb-20 md-min:h-[calc(100vh-100px)]">
         <div className="flex mb-5 flex-row bg-white rounded-2lg px-5 py-4 justify-start items-center rounded-xl">
-          <p className="text-title font-medium">
+          <p className="text-sm font-normal">
             <span className="text-green-500 font-medium">Section: </span>
-            The servant is dependent on his Lord
+            {selectedItem
+              ? selectedItem.subItemsTitle 
+              : "Select an item to see details"}
           </p>
         </div>
       </div>

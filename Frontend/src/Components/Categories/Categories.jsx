@@ -5,7 +5,7 @@ const Categories = () => {
   return (
     <>
       <div className="w-full max-w-xl  bg-white border border-gray-200 rounded-lg shadow ">
-        <h5 className="mb-3 p-2 text-base font-semibold bg-[#1FA45B] text-white text-center  rounded-t-lg  border-b-2 w-full md:text-xl dark:text-white">
+        <h5 className="mb-3 py-4 text-md font-normal bg-[#1FA45B] text-white text-center  rounded-t-lg   w-full ">
           Categories
         </h5>
 

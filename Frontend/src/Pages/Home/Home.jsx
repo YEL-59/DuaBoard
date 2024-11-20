@@ -4,21 +4,21 @@ import MainPage from '../ManiPage/MainPage';
 
 const Home = () => {
   return (
-    <div className="h-screen flex flex-col sm:flex-row">
+    <div className="h-screen bg-gray-100 flex flex-col sm:flex-row gap-10 ">
       {/* Sidebar */}
-      <aside className=" text-white w-16 sm:h-full h-auto fixed sm:relative">
+      <div className=" text-white px-5 ">
         <SideNavbar />
-      </aside>
+      </div>
 
       {/* Main Section */}
       <div className="flex-1 flex flex-col sm:ml-5">
         {/* Navbar */}
-        <header className="bg-gray-50 sticky top-0 z-10 shadow">
+        <header className="bg-transparent sticky top-0 z-10 ">
           <Navbars />
         </header>
 
         {/* Content Area */}
-        <main className="flex-grow p-4 bg-gray-100 overflow-auto">
+        <main className="flex-grow p-4  overflow-auto">
           <MainPage />
         </main>
       </div>
