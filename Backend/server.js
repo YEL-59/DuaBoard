@@ -8,34 +8,101 @@ const PORT = 5000;
 app.use(cors());
 
 // Sample Data
-const dropdownData = {
-  items: [
+const dropdownData = 
+  [
     {
-      id: 1,
-      name: "Item 1",
-      subItems: [
-        { id: 101, name: "Subitem 1.1" },
-        { id: 102, name: "Subitem 1.2" },
-      ],
+      "mainTitle": "Dua's Importancs",
+      "items": [
+        {
+          "id": 1,
+          "name": "The servant is dependent on his Lord ",
+          "subItems": [
+            { "id": 101, "name": "The servant is dependent on his Lord #1" },
+            { "id": 102, "name": "The servant is dependent on his Lord #2" },
+            { "id": 103, "name": "The reward of freeing of a slave" },
+          ]
+        },
+        {
+          "id": 2,
+          "name": " The most important thing to ask Allah for",
+          "subItems": [
+            { "id": 201, "name": " Allah's guidance #1" },
+            { "id": 202, "name": " Allah's guidance #2" },
+            { "id": 203, "name": " Allah's guidance #3" },
+
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Ask for paradise & protection from fire",
+          "subItems": [
+            { "id": 301, "name": "Ask for paradise & seek refuge from fire" },
+            { "id": 302, "name": "Seeking good of this world and the hereafter" }
+          ]
+        }
+      ]
     },
     {
-      id: 2,
-      name: "Item 2",
-      subItems: [
-        { id: 201, name: "Subitem 2.1" },
-        { id: 202, name: "Subitem 2.2" },
-      ],
+      "mainTitle": "Main Title 2",
+      "items": [
+        {
+          "id": 1,
+          "name": "Item 1",
+          "subItems": [
+            { "id": 101, "name": "Subitem 1.1" },
+            { "id": 102, "name": "Subitem 1.2" }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Item 2",
+          "subItems": [
+            { "id": 201, "name": "Subitem 2.1" },
+            { "id": 202, "name": "Subitem 2.2" }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Item 3",
+          "subItems": [
+            { "id": 301, "name": "Subitem 3.1" },
+            { "id": 302, "name": "Subitem 3.2" }
+          ]
+        }
+      ]
     },
     {
-      id: 3,
-      name: "Item 3",
-      subItems: [
-        { id: 301, name: "Subitem 3.1" },
-        { id: 302, name: "Subitem 3.2" },
-      ],
-    },
-  ],
-};
+      "mainTitle": "Main Title 3",
+      "items": [
+        {
+          "id": 1,
+          "name": "Item 1",
+          "subItems": [
+            { "id": 101, "name": "Subitem 1.1" },
+            { "id": 102, "name": "Subitem 1.2" }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Item 2",
+          "subItems": [
+            { "id": 201, "name": "Subitem 2.1" },
+            { "id": 202, "name": "Subitem 2.2" }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Item 3",
+          "subItems": [
+            { "id": 301, "name": "Subitem 3.1" },
+            { "id": 302, "name": "Subitem 3.2" }
+          ]
+        }
+      ]
+    }
+  ]
+  
+
 
 // API Route
 app.get('/api/dropdown', (req, res) => {
