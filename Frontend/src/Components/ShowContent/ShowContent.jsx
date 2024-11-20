@@ -1,4 +1,5 @@
 import React from "react";
+import ShowSubContent from "./ShowSubContent";
 
 const ShowContent = () => {
   return (
@@ -19,6 +20,16 @@ const ShowContent = () => {
           </p>
         </div>
       </div>
+
+    
+        <div
+          
+          className="flex undefined mb-5 flex-row bg-white rounded-2lg px-5 py-4 justify-start items-center rounded-xl"
+        >
+          <ShowSubContent/>
+        </div>
+      
+
     </>
   );
 };

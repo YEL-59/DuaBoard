@@ -17,7 +17,20 @@ const dropdownData =
           "id": 1,
           "name": "The servant is dependent on his Lord ",
           "subItems": [
-            { "id": 101, "name": "The servant is dependent on his Lord #1" },
+            {
+              "id": 101,
+              "name": "The servant is dependent on his Lord #1",
+              "subItemsDetails": [{
+                "id": 1011,
+                "subItemsTitle": "1. The servant is dependent on his Lord #1",
+                "subItemsDetails": "All human beings depend on Allah for their welfare and prevention of evil in various matters of their religion and world. Allah says (interpretation of the meaning): O mankind, you are those in need of Allah, while Allah is the Free of need, the Praiseworthy.",
+                "subItemsReference":"Surah Al-Fatir 35:15"
+
+              }
+                
+              ]
+              
+            },
             { "id": 102, "name": "The servant is dependent on his Lord #2" },
             { "id": 103, "name": "The reward of freeing of a slave" },
           ]

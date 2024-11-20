@@ -1,13 +1,19 @@
 import React from "react";
 import { useState } from "react";
-
+import { useDispatch } from "react-redux";
+import { setSubContent } from "../../store/subContentSlice";
 const SingleDropdown = ({ data }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(null);
+    const [activeItem, setActiveItem] = useState(null);
+    const dispatch = useDispatch();
 
   const handleToggle = () => setDropdownOpen(!isDropdownOpen);
   const handleItemClick = (itemId) => {
     setActiveItem((prevItem) => (prevItem === itemId ? null : itemId));
+  };
+    
+  const handleSubItemClick = (subItem) => {
+    dispatch(setSubContent(subItem));
   };
   return (
     <>
@@ -64,7 +70,8 @@ const SingleDropdown = ({ data }) => {
                       {item.subItems.map((subItem) => (
                         <li
                           key={subItem.id}
-                          className="text-xs text-gray-700 hover:bg-gray-200 rounded p-1 mb-2"
+                              className="text-xs text-gray-700 hover:bg-gray-200 rounded p-1 mb-2"
+                              onClick={() => handleSubItemClick(subItem.subItemsDetails[0])}
                         >
                           <img
                             src="https://duaruqyah.com/assets/duaarrow.svg"
