@@ -8,7 +8,7 @@ const ShowContent = () => {
   const selectedItem = useSelector((state) => state.subContent.selectedItem);
   useEffect(() => {
     // Fetch the data from the API
-    fetch("http://localhost:5000/api/dropdown")
+    fetch("https://backend-ten-delta-66.vercel.app/api/dropdown")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching dropdown data:", error));
