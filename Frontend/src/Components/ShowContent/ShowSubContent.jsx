@@ -41,19 +41,41 @@ const ShowSubContent = ({ detail }) => {
         </h2>
       </div>
       <div>
-        <p className="mb-5">{detail.subItemsDetails.textheader}</p>
-        <p className=" text-lg leading-9  font-medium mb-5">{detail.subItemsDetails.text}</p>
-        <p className="mb-8 text-lg font-medium ml-20">{detail.subItemsDetails.arabic}</p>
+  {/* Conditionally render textheader if available */}
+  {detail.subItemsDetails.textheader && (
+    <p className="mb-5">{detail.subItemsDetails.textheader}</p>
+  )}
 
-        
-        <p className="mb-5 font-medium ">
-          <strong>Transliteration:</strong>{" "}
-          <span className="italic">{detail.subItemsDetails.transliteration}</span>
-        </p>
-        <p className="font-medium text-gray-400">
-          <strong>Translation:</strong> {detail.subItemsDetails.translation}
-        </p>
-      </div>
+  {/* Conditionally render text if available */}
+  {detail.subItemsDetails.text && (
+    <p className="text-lg leading-9 font-medium mb-5">
+      {detail.subItemsDetails.text}
+    </p>
+  )}
+
+  {/* Conditionally render Arabic if available */}
+  {detail.subItemsDetails.arabic && (
+    <p className="mb-8 text-lg font-medium ml-20">
+      {detail.subItemsDetails.arabic}
+    </p>
+  )}
+
+  {/* Conditionally render Transliteration if available */}
+  {detail.subItemsDetails.transliteration && (
+    <p className="mb-5 font-medium">
+      <strong>Transliteration:</strong>{" "}
+      <span className="italic">{detail.subItemsDetails.transliteration}</span>
+    </p>
+  )}
+
+  {/* Conditionally render Translation if available */}
+  {detail.subItemsDetails.translation && (
+    <p className="font-medium text-gray-400">
+      <strong>Translation:</strong> {detail.subItemsDetails.translation}
+    </p>
+  )}
+</div>
+
 
       <p className="text-sm text-black mt-5 font-medium">
          <strong className="text-md text-green-500">Reference: </strong>{detail.subItemsReference}
